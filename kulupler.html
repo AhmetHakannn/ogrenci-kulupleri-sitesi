@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulüpler - Öğrenci Kulüpleri</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-people-fill me-2"></i>Öğrenci Kulüpleri
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="kulupler.html"><i class="bi bi-collection me-1"></i>Kulüpler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uyelik.html"><i class="bi bi-file-earmark-text me-1"></i>Üyelik Formu</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+
+        <!-- BREADCRUMB -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Kulüpler</li>
+            </ol>
+        </nav>
+
+        <h2 class="mb-4"><i class="bi bi-grid-fill me-2"></i>Kulüplerimiz</h2>
+
+        <!-- KULÜPLER GRID & CARDS -->
+        <div class="row g-4">
+            
+            <!-- Yazılım Kulübü -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=80" class="card-img-top" alt="Yazılım" style="height: 180px; object-fit: cover;">
+                    <div class="card-header bg-primary text-white">Teknoloji</div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Yazılım Kulübü</h5>
+                            <p class="card-text">Web, mobil ve yapay zeka üzerine atölyeler ve hackathonlar düzenler.</p>
+                        </div>
+                        <button class="btn btn-outline-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalYazilim">
+                            <i class="bi bi-info-circle me-1"></i> Detay
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tiyatro Kulübü -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=500&q=80" class="card-img-top" alt="Tiyatro" style="height: 180px; object-fit: cover;">
+                    <div class="card-header bg-danger text-white">Sanat</div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Tiyatro Kulübü</h5>
+                            <p class="card-text">Sahne sanatları eğitimleri ve dönem sonu oyunları hazırlar.</p>
+                        </div>
+                        <button class="btn btn-outline-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalTiyatro">
+                            <i class="bi bi-info-circle me-1"></i> Detay
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doğa Sporları Kulübü -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80" class="card-img-top" alt="Doğa Sporları" style="height: 180px; object-fit: cover;">
+                    <div class="card-header bg-success text-white">Doğa</div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Doğa Sporları Kulübü</h5>
+                            <p class="card-text">Kamp, trekking ve doğa yürüyüşleri organize eder.</p>
+                        </div>
+                        <button class="btn btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#modalDoga">
+                            <i class="bi bi-info-circle me-1"></i> Detay
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Satranç Kulübü -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=500&q=80" class="card-img-top" alt="Satranç" style="height: 180px; object-fit: cover;">
+                    <div class="card-header bg-warning text-dark">Spor</div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Satranç Kulübü</h5>
+                            <p class="card-text">Haftalık turnuvalar ve başlangıç seviyesi eğitimler sunar.</p>
+                        </div>
+                        <button class="btn btn-outline-warning text-dark mt-3" data-bs-toggle="modal" data-bs-target="#modalSatranc">
+                            <i class="bi bi-info-circle me-1"></i> Detay
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Girişimcilik Kulübü -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=80" class="card-img-top" alt="Girişimcilik" style="height: 180px; object-fit: cover;">
+                    <div class="card-header bg-info text-white">Kariyer</div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Girişimcilik Kulübü</h5>
+                            <p class="card-text">Girişimci konuklar, iş fikri yarışmaları ve mentorluk programları yürütür.</p>
+                        </div>
+                        <button class="btn btn-outline-info mt-3" data-bs-toggle="modal" data-bs-target="#modalGirisim">
+                            <i class="bi bi-info-circle me-1"></i> Detay
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gönüllülük Kulübü -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&q=80" class="card-img-top" alt="Gönüllülük" style="height: 180px; object-fit: cover;">
+                    <div class="card-header bg-secondary text-white">Sosyal</div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Gönüllülük Kulübü</h5>
+                            <p class="card-text">Sosyal sorumluluk projeleri ve yardım kampanyaları düzenler.</p>
+                        </div>
+                        <button class="btn btn-outline-secondary mt-3" data-bs-toggle="modal" data-bs-target="#modalGonullu">
+                            <i class="bi bi-info-circle me-1"></i> Detay
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a class="page-link" href="#">Önceki</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">Sonraki</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!-- MODALLAR (POP-UP) -->
+    
+    <!-- Yazılım Modal -->
+    <div class="modal fade" id="modalYazilim" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Yazılım Kulübü</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong><i class="bi bi-person-badge me-1"></i>Başkan:</strong> Ahmet Yılmaz</p>
+                    <p><strong><i class="bi bi-envelope me-1"></i>E-posta:</strong> <a href="mailto:yazilim@universite.edu.tr">yazilim@universite.edu.tr</a></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="uyelik.html" class="btn btn-primary"><i class="bi bi-pencil-square me-1"></i>Üyelik Formuna Git</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tiyatro Modal -->
+    <div class="modal fade" id="modalTiyatro" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">Tiyatro Kulübü</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong><i class="bi bi-person-badge me-1"></i>Başkan:</strong> Elif Demir</p>
+                    <p><strong><i class="bi bi-envelope me-1"></i>E-posta:</strong> <a href="mailto:tiyatro@universite.edu.tr">tiyatro@universite.edu.tr</a></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="uyelik.html" class="btn btn-primary"><i class="bi bi-pencil-square me-1"></i>Üyelik Formuna Git</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doğa Sporları Modal -->
+    <div class="modal fade" id="modalDoga" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Doğa Sporları Kulübü</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong><i class="bi bi-person-badge me-1"></i>Başkan:</strong> Mehmet Kaya</p>
+                    <p><strong><i class="bi bi-envelope me-1"></i>E-posta:</strong> <a href="mailto:doga@universite.edu.tr">doga@universite.edu.tr</a></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="uyelik.html" class="btn btn-primary"><i class="bi bi-pencil-square me-1"></i>Üyelik Formuna Git</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Satranç Modal -->
+    <div class="modal fade" id="modalSatranc" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-dark">
+                    <h5 class="modal-title">Satranç Kulübü</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong><i class="bi bi-person-badge me-1"></i>Başkan:</strong> Zeynep Arslan</p>
+                    <p><strong><i class="bi bi-envelope me-1"></i>E-posta:</strong> <a href="mailto:satranc@universite.edu.tr">satranc@universite.edu.tr</a></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="uyelik.html" class="btn btn-primary"><i class="bi bi-pencil-square me-1"></i>Üyelik Formuna Git</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Girişimcilik Modal -->
+    <div class="modal fade" id="modalGirisim" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Girişimcilik Kulübü</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong><i class="bi bi-person-badge me-1"></i>Başkan:</strong> Can Özdemir</p>
+                    <p><strong><i class="bi bi-envelope me-1"></i>E-posta:</strong> <a href="mailto:girisim@universite.edu.tr">girisim@universite.edu.tr</a></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="uyelik.html" class="btn btn-primary"><i class="bi bi-pencil-square me-1"></i>Üyelik Formuna Git</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gönüllülük Modal -->
+    <div class="modal fade" id="modalGonullu" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white">
+                    <h5 class="modal-title">Gönüllülük Kulübü</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong><i class="bi bi-person-badge me-1"></i>Başkan:</strong> Selin Çelik</p>
+                    <p><strong><i class="bi bi-envelope me-1"></i>E-posta:</strong> <a href="mailto:gonullu@universite.edu.tr">gonullu@universite.edu.tr</a></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="uyelik.html" class="btn btn-primary"><i class="bi bi-pencil-square me-1"></i>Üyelik Formuna Git</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2026 Öğrenci Kulüpleri</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
